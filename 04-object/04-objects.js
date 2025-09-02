@@ -103,3 +103,34 @@ const logger = {
 
 // logger.keys.call(person, ...);//Сразу вызывае функцию, принимает неограниченное количество аргументов функции
 // logger.keys.apply(person, []);//Сразу вызывае функциюб принимает два параметра второй всегда массив
+
+//=========================Классы и наследование==========//
+
+class Human {
+  static isHuman = true;//Поле статично и ен проецируется на экземпляры класса
+
+  humanGreet() {
+    console.log('Greet human', this.name);
+  }
+};
+
+class Person extends Human {
+  constructor(name, age) {
+    super() //функция котора вызывает родительский конструктор
+    this.name = name ?? 'Undefined';
+    this.age = age;
+  }
+  sayHello() {
+    console.log('Hello', this.name);
+  }
+}
+
+const person1 = new Person('Luba', 25);
+console.log(person1);
+person1.sayHello();
+
+const person2 = new Person('Elena', 30);
+person2.sayHello();
+person2.humanGreet();
+
+console.log(Person.isHuman);
