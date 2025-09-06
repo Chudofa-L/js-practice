@@ -10,6 +10,7 @@ body {
   overflow: hidden;
   margin: 0;
   height: 100vh;
+  position: relative;
   background-image: url(./img/bg-gallery.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -20,13 +21,6 @@ body {
   width: 60%;
   margin: 0 auto;
   padding: 20px;
-}
-
-.container_sliders {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
 }
 
 .title {
@@ -58,27 +52,30 @@ body {
   margin: 0;
 }
 
-.slide {
-  height: 70vh;
-  border-radius: 20px;
-  cursor: pointer;
-  flex: 1;
-  border: 2px solid rgba(216, 215, 212, 0.8);
-  overflow: hidden;
-  transition: all 500ms ease-in-out;
-  position: relative;
+.container_slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.slide_img {
+.swiper {
+  height: 500px;
+  width: 500px;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-slide img {
   height: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .text {
   padding: 20px;
-  opacity: 0;
+  opacity: 1;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -96,13 +93,4 @@ body {
   font-size: 16px;
   margin: 0;
   margin-top: 10px;
-}
-
-.slide.active {
-  flex: 10;
-}
-
-.slide.active .text {
-  opacity: 1;
-  transition: opacity 0.3s ease-in 0.4s;
 }
