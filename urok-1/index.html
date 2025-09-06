@@ -6,11 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="styles.css" />
   <title>Карточки | Проект 1</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
   <div class="container">
-
     <div class="title">
       <img src="./img/v-v-g-photo.jpg" alt="Van Gogh">
 
@@ -19,51 +19,49 @@
         <p>(1853-1890)</p>
       </div>
     </div>
-    <div class="container_sliders">
-      <div class="slide">
-        <div class="slide_img" style="background-image: url(./img/art-1.jpg);">
-        </div>
+  </div>
+
+  <div class="container_sliders swiper">
+    <div class="swiper-wrapper">
+      <div class="slide swiper-slide">
+        <img class="slide_img" src="./img/art-1.jpg">
         <div class="text">
           <h3>Starry Night</h3>
           <p>1889</p>
         </div>
       </div>
-      <div class="slide">
-        <div class="slide_img" style="background-image: url(./img/art-2.jpg);">
-        </div>
+      <div class="slide swiper-slide">
+        <img class="slide_img" src="./img/art-2.jpg">
         <div class="text">
           <h3>Sunflowers</h3>
           <p>1888</p>
         </div>
       </div>
-      <div class="slide">
-        <div class="slide_img" style="background-image: url(./img/art-3.jpg);">
-        </div>
+      <div class="slide swiper-slide">
+        <img class="slide_img" src="./img/art-3.jpg">
         <div class="text">
           <h3>Irises</h3>
           <p>1889</p>
         </div>
       </div>
-      <div class="slide">
-        <div class="slide_img" style="background-image: url(./img/art-4.jpg);">
-        </div>
+      <div class="slide swiper-slide">
+        <img class="slide_img" src="./img/art-4.jpg">
         <div class="text">
           <h3>Starry Night</h3>
           <p>1888</p>
         </div>
       </div>
-      <div class="slide">
-        <div class="slide_img" style="background-image: url(./img/art-5.jpg);">
-        </div>
+      <div class="slide swiper-slide">
+        <img class="slide_img" src="./img/art-5.jpg">
         <div class="text">
           <h3>Wheat Field with Cypresses</h3>
           <p>1889</p>
         </div>
       </div>
     </div>
-
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="app.js"></script>
 </body>
 

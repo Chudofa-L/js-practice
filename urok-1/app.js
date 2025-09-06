@@ -1,20 +1,4 @@
-function slidesPlagin(active = 2) {
-  const slides = document.querySelectorAll('.slide');
-
-  slides[active].classList.add('active')
-
-  for (const slide of slides) {
-    slide.addEventListener('click', () => {
-      clearActiveClasses()
-      slide.classList.add('active');
-    })
-  };
-
-  function clearActiveClasses() {
-    slides.forEach((slide) => {
-      slide.classList.remove('active')
-    })
-  };
-};
-
-slidesPlagin();
+const swiper = new Swiper(".swiper", {
+  effect: "cards",
+  grabCursor: true,
+});
